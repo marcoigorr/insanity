@@ -233,7 +233,9 @@ with mss.mss() as sct:
             text = pytesseract.image_to_string(im)
             # cv2.imshow('Image', im)
 
-            giveAnswer(text)
+            new_text = text.replace("\n", " ")
+
+            giveAnswer(new_text)
 
             # Press "0" to quit
             if cv2.waitKey(25) & 0xFF == ord('0'):
