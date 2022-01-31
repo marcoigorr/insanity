@@ -7,7 +7,6 @@ import keyboard
 import webbrowser
 import os
 import webview
-
 from utils import giveAnswer
 
 pytesseract.pytesseract.tesseract_cmd = '.\\Tesseract-OCR\\tesseract.exe'
@@ -19,7 +18,7 @@ def main():
     
     with mss.mss() as sct:
         while True:
-            if keyboard.read_key() == 'p':
+            if keyboard.read_key() == 'z':
 
                 im = numpy.asarray(sct.grab(mon))
                 # im = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
@@ -34,8 +33,6 @@ def main():
                 giveAnswer(text)
             else:
                 pass
-
-
 
 if __name__ == "__main__":
     main()

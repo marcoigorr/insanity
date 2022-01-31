@@ -11,7 +11,7 @@ import webview
 
 question_list = [
     "pisciati",
-    "What is the prefix length notation for the subnet mask 255.255.255.224",
+    "Which action is performed by a client when establishing communication with a server via the use of UDP at the transport layer",
     ]
 
 def getQuestion(index):
@@ -33,10 +33,13 @@ def createWindow(answer):
     time.sleep(0.3)
     os.remove("text.txt")
 
-# Yanderedev momentum
+# +----------------------------------------------------------------+
+# +---------------------- Yanderedev momentum ---------------------+
+# +----------------------------------------------------------------+
+
 def giveAnswer(text):
     if getQuestion(1) in text:
-        createWindow("/27")
+        createWindow("The client randomly selects a source port number.")
 
     else:
         createWindow("No answer or question found")
