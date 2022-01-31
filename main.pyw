@@ -1,18 +1,9 @@
-import time
-import cv2
+
 import mss
 import numpy
 import pytesseract
 import keyboard
-import webbrowser
-import os
-import webview
 from utils import giveAnswer
-
-pytesseract.pytesseract.tesseract_cmd = '.\\Tesseract-OCR\\tesseract.exe'
-
-# Dimensione della cattura
-mon = {'top': 100, 'left': 0, 'width': 1920, 'height': 600}
 
 def main():
     
@@ -35,4 +26,13 @@ def main():
                 pass
 
 if __name__ == "__main__":
+
+    pytesseract.pytesseract.tesseract_cmd = '.\\Tesseract-OCR\\tesseract.exe'
+
+    # Screen capture settings
+    mon = {'top': 100, 'left': 0, 'width': 1920, 'height': 600}
+
+    # Answer file creation
+    open('text.txt', 'w')
+
     main()
