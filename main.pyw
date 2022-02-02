@@ -24,8 +24,11 @@ def createWindow(root):
     # Status of the window: set to icon, it is minimized
     root.state(newstate='iconic')
 
-    # Invisible icon
-    #root.iconbitmap('./icon.ico')
+    # Invisible icon, check 
+    try:
+        root.iconbitmap('./icon.ico')
+    except:
+        pass
     
     # Start window loop
     root.mainloop()
