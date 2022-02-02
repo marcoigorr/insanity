@@ -1,4 +1,4 @@
-import keyboard, time, os, sys
+import keyboard
 from threading import Thread
 from utils import getAnswer, getScrText
 from tkinter import *
@@ -36,7 +36,7 @@ def createWindow(root):
 def closeWindow():
     while True:
         if keyboard.read_key() == 'x':            
-            # print("Pressed X")       
+            print("Pressed X")       
             try:                             
                 root.quit()
                 root.withdraw()
@@ -48,7 +48,7 @@ def closeWindow():
 def main():
     while True:
         if keyboard.read_key() == 'z':
-            # print("Pressed Z")
+            print("Pressed Z")
 
             global root
             root = Tk()
