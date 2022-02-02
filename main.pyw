@@ -5,16 +5,29 @@ from tkinter import *
 
 
 def createWindow(root):     
-
-    root.geometry("250x50")
-
-    root.title("TkWindow")
-           
+    # Get answer
     answer = getAnswer(getScrText())
 
+    # Window width x height + right + down
+    root.geometry("300x80+300+1050")
+
+    # This line modify opacity of the window
+    root.attributes('-alpha', 1)
+
+    # Window title
+    root.title(answer)   
+
+    # Content
     lbl=Label(root, text=answer)
     lbl.place(x=5, y=5)
 
+    # Status of the window: set to icon, it is minimized
+    root.state(newstate='iconic')
+
+    # Invisible icon
+    #root.iconbitmap('./icon.ico')
+    
+    # Start window loop
     root.mainloop()
 
 def closeWindow():
