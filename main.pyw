@@ -2,11 +2,6 @@ import keyboard, time, os, sys
 from threading import Thread
 from utils import getAnswer, getScrText
 from tkinter import *
-from tkinter import ttk
-import matplotlib
-matplotlib.use('TkAgg')
-from matplotlib import pyplot as plt
-
 
 
 def createWindow(root):     
