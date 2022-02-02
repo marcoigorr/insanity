@@ -1,9 +1,9 @@
-import time
-import keyboard
-import webbrowser
-import os
-import webview
+import mss
+import numpy
+import pytesseract
 
+
+# Question array
 question_list = [
     "pisciati",
     "Which action is performed by a client when establishing communication with a server via the use of UDP at the transport layer",
@@ -70,223 +70,215 @@ question_list = [
 
     ]
 
+
+def getScrText():
+    pytesseract.pytesseract.tesseract_cmd = '.\\Tesseract-OCR\\tesseract.exe'
+
+    # Screen capture settings
+    mon = {'top': 100, 'left': 0, 'width': 1920, 'height': 600}
+
+    with mss.mss() as sct:
+        im = numpy.asarray(sct.grab(mon))
+        # im = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+
+        text = pytesseract.image_to_string(im)
+        # cv2.imshow('Image', im)
+
+        return text.replace("\n", " ").replace(" ", "").lower()
+
+
 def getQuestion(index):
     return question_list[index].lower().replace(" ", "")
 
-def destroy(window):
-    while True:
-        if keyboard.read_key() == 'x':
-            try:
-                window.destroy()
-            except:
-                pass
-        else:
-            pass
-    f = open('text.txt','r+')
-    f.truncate(0)
-    f.close()
-
-def createWindow(answer):
-    with open('text.txt', 'w') as f:
-        f.write(answer)
-        f.close()
-
-        window = webview.create_window(answer, 'text.txt', width=100, height=50, x=800, y=1080)
-        webview.start(destroy, window)
-
-
-# +----------------------------------------------------------------+
-# +---------------------- Yanderedev momentum ---------------------+
-# +----------------------------------------------------------------+
-
-def giveAnswer(text):
+# ---------------------- Yanderedev momentum ---------------------
+def getAnswer(text):
     if getQuestion(1) in text:
-        createWindow("The client randomly selects a source port number.")
+        return("The client randomly selects a source port number.")
     
     elif getQuestion(2) in text:
-        createWindow("TCP 3-way handshake")
+        return("TCP 3-way handshake")
 
     elif getQuestion(3) in text:
-        createWindow("0 to 1023")
+        return("0 to 1023")
 
     elif getQuestion(4) in text:
-        createWindow("the combination of a source IP address")
+        return("the combination of a source IP address")
 
     elif getQuestion(5) in text:
-        createWindow("10 segments")
+        return("10 segments")
 
     elif getQuestion(6) in text:
-        createWindow("the amount of data the destination can process at one time")
+        return("the amount of data the destination can process at one time")
 
     elif getQuestion(7) in text:
-        createWindow("It just sends the datagrams")
+        return("It just sends the datagrams")
 
     elif getQuestion(8) in text:
-        createWindow("Length, Source Port, Checksum")
+        return("Length, Source Port, Checksum")
 
     elif getQuestion(9) in text:
-        createWindow("identifying, tracking")
+        return("identifying, tracking")
 
     elif getQuestion(10) in text:
-        createWindow("sequence numbers")
+        return("sequence numbers")
 
     elif getQuestion(11) in text:
-        createWindow("destination and source port numbers")
+        return("destination and source port numbers")
 
     elif getQuestion(12) in text:
-        createWindow("Destination devices receive traffic with minimal delay, Received")
+        return("Destination devices receive traffic with minimal delay, Received")
 
     elif getQuestion(13) in text:
-        createWindow("FIN;ACK;FIN;ACK")
+        return("FIN;ACK;FIN;ACK")
 
     elif getQuestion(14) in text:
-        createWindow("ACK")
+        return("ACK")
 
     elif getQuestion(15) in text:
-        createWindow("DNS")
+        return("DNS")
 
     elif getQuestion(16) in text:
-        createWindow("UDP reassembles the received datagrams")
+        return("UDP reassembles the received datagrams")
 
     elif getQuestion(17) in text:
-        createWindow("registered port")
+        return("registered port")
 
     elif getQuestion(18) in text:
-        createWindow("SMTP FTP HTTP")
+        return("SMTP FTP HTTP")
 
     elif getQuestion(19) in text:
-        createWindow("provides basic; relies on application; is a low overhead")
+        return("provides basic; relies on application; is a low overhead")
 
     elif getQuestion(20) in text:
-        createWindow("window, sequence number")
+        return("window, sequence number")
 
     elif getQuestion(21) in text:
-        createWindow("control bits")
+        return("control bits")
 
     elif getQuestion(22) in text:
-        createWindow("because HTTP requires reliable delivery")
+        return("because HTTP requires reliable delivery")
 
     elif getQuestion(23) in text:
-        createWindow("that handle; that can")
+        return("that handle; that can")
 
     elif getQuestion(24) in text:
-        createWindow("If multiple conversations")
+        return("If multiple conversations")
 
     elif getQuestion(25) in text:
-        createWindow("when a faster delivery; when applications do not need")
+        return("when a faster delivery; when applications do not need")
 
     elif getQuestion(26) in text:
-        createWindow("meeting; multiplexing; identifying")
+        return("meeting; multiplexing; identifying")
 
     elif getQuestion(27) in text:
-        createWindow("255.255.255.255; a client seeking an IP address; but only a DHCP server replies")
+        return("255.255.255.255; a client seeking an IP address; but only a DHCP server replies")
 
     elif getQuestion(28) in text:
-        createWindow("SMTP DNS")
+        return("SMTP DNS")
 
     elif getQuestion(29) in text:
-        createWindow("Clients establish a long term connection to servers")
+        return("Clients establish a long term connection to servers")
 
     elif getQuestion(30) in text:
-        createWindow("to request an HTML page from a web server")
+        return("to request an HTML page from a web server")
 
     elif getQuestion(31) in text:
-        createWindow("application")
+        return("application")
 
     elif getQuestion(32) in text:
-        createWindow("client/server")
+        return("client/server")
 
     elif getQuestion(33) in text:
-        createWindow("Both models support.")
+        return("Both models support.")
 
     elif getQuestion(34) in text:
-        createWindow("peer-to-peer")
+        return("peer-to-peer")
 
     elif getQuestion(35) in text:
-        createWindow("Gnutella")
+        return("Gnutella")
 
     elif getQuestion(36) in text:
-        createWindow("resource sharing")
+        return("resource sharing")
 
     elif getQuestion(37) in text:
-        createWindow("session presentation application")
+        return("session presentation application")
 
     elif getQuestion(38) in text:
-        createWindow("www.cisco.com")
+        return("www.cisco.com")
 
     elif getQuestion(39) in text:
-        createWindow("application")
+        return("application")
 
     elif getQuestion(40) in text:
-        createWindow("SMB clients can establish a long-term")
+        return("SMB clients can establish a long-term")
 
     elif getQuestion(41) in text:
-        createWindow("FTP HTTP SMTP")
+        return("FTP HTTP SMTP")
 
     elif getQuestion(42) in text:
-        createWindow("HTTP")
+        return("HTTP")
 
     elif getQuestion(43) in text:
-        createWindow("the domain name mapped to")
+        return("the domain name mapped to")
 
     elif getQuestion(44) in text:
-        createWindow("FTP POP3 DHCP")
+        return("FTP POP3 DHCP")
 
     elif getQuestion(45) in text:
-        createWindow("HTTPS")
+        return("HTTPS")
 
     elif getQuestion(46) in text:
-        createWindow("P2P applications")
+        return("P2P applications")
 
     elif getQuestion(47) in text:
-        createWindow("decentralized resources, resource sharing")
+        return("decentralized resources, resource sharing")
 
     elif getQuestion(48) in text:
-        createWindow("A student has two web browser windows open in order to access two web sites")
+        return("A student has two web browser windows open in order to access two web sites")
 
     elif getQuestion(49) in text:
-        createWindow("session layer; application layer; presentation layer")
+        return("session layer; application layer; presentation layer")
 
     elif getQuestion(50) in text:
-        createWindow("3001")
+        return("3001")
 
     elif getQuestion(51) in text:
-        createWindow("4501")
+        return("4501")
 
     elif getQuestion(52) in text:
-        createWindow("6001")
+        return("6001")
 
     elif getQuestion(53) in text: # 60 in itexamanswers.net
-        createWindow("69")
+        return("69")
 
     elif getQuestion(54) in text: # 61 in itexamanswers.net
-        createWindow("21")
+        return("21")
 
     elif getQuestion(55) in text: # 62 in itexamanswers.net
-        createWindow("22")
+        return("22")
 
     elif getQuestion(56) in text: # 63 in itexamanswers.net
-        createWindow("80")
+        return("80")
 
     elif getQuestion(57) in text: # 64 in itexamanswers.net
-        createWindow("110")
+        return("110")
 
     elif getQuestion(58) in text: # 65 in itexamanswers.net
-        createWindow("23")
+        return("23")
 
                                   # skipped 66
 
     elif getQuestion(59) in text: # 67 in itexamanswers.net 
-        createWindow("161")
+        return("161")
 
     elif getQuestion(60) in text: # 68 in itexamanswers.net
-        createWindow("25")
+        return("25")
 
     elif getQuestion(61) in text: # 69 in itexamanswers.net
-        createWindow("443")    
+        return("443")    
 
     else:
-        createWindow("No answer or question found")
+        return("No answer or question found")
 
 """
 ,,,,,,,,,,,,,...........,,,,,,,,,,,,,,.............,,,,,,.........,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
