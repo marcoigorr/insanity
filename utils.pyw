@@ -129,7 +129,7 @@ def getAnswer(text):
         return("Destination devices receive traffic with minimal delay, Received")
 
     elif getQuestion(13) in text:
-        return("FIN;ACK;FIN;ACK")
+        return("cl FIN;srv ACK;srv FIN;cl ACK")
 
     elif getQuestion(14) in text:
         return("ACK")
