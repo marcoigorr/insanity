@@ -3,6 +3,10 @@ Program that reads text from screen and gives answer based on 75 if else :)
 
 Check **Realeases** to install Insanity -> [**Here**](https://github.com/marcoigorr/insanity/releases)
 
+- [**Mod. 11-13**](https://github.com/marcoigorr/insanity/releases/download/v3.0.1-mod_11-13/Insanity.3.0.1_mod_11-13.zip)
+- [**Mod. 14-15**](https://github.com/marcoigorr/insanity/releases/download/v3.0.1/Insanity3.0.1_mod_14-15.zip)
+
+
 If you know you know
 ## Usage
     
