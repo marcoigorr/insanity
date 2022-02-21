@@ -1,16 +1,22 @@
 # Insanity
 Program that reads text from screen and gives answer based on 75 if else :)
 
+Check **Realeases** to install Insanity -> [**Here**](https://github.com/marcoigorr/insanity/releases)
+
+- [**Mod. 11-13**](https://github.com/marcoigorr/insanity/releases/download/v3.0.1-mod_11-13/Insanity.3.0.1_mod_11-13.zip)
+- [**Mod. 14-15**](https://github.com/marcoigorr/insanity/releases/download/v3.0.1/Insanity3.0.1_mod_14-15.zip)
+
+
 If you know you know
 ## Usage
     
-- press 'z' to get the answer window when you have on screen the question.
+- press **'z'** to get the answer window when you have on screen the question.
 
-- press 'x' to close dialogue.
+- press **'x'** to close dialogue.
 
 ## Requirements for working on source code
 
-You must dowload the binary and move it in the directory with main.pyw
+To make sure that the script works correctly, you must dowload Tesseract-OCT binary and move it in the directory with main.pyw
  
 - GitHub Page: https://github.com/tesseract-ocr/tesseract
   
@@ -20,6 +26,3 @@ Then add this line of code:
 
     pytesseract.pytesseract.tesseract_cmd = '.\\Tesseract-OCR\\tesseract.exe'
   
-## About
-
-![ur,socks_flatlay_medium,square,600x600-bg,f8f8f8 1](https://user-images.githubusercontent.com/87567996/151810584-a25b6ef9-763e-4574-b45b-90926bd14fa5.jpg)
