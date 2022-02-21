@@ -6,68 +6,74 @@ import pytesseract
 # Question array
 question_list = [
     "pisciati",
-    "Which action is performed by a client when establishing communication with a server via the use of UDP at the transport layer",
-    "Which transport layer feature is used to guarantee session establishment",
-    "What is the complete range of TCP and UDP well-known ports",
-    "What is a socket",
-    "A PC is downloading a large file from a server. The TCP window is 1000 bytes",
-    "Which factor determines TCP window size",
-    "What does a client do when it has UDP datagrams to send",
-    "Which three fields are used in a UDP segment header",
-    "What are two roles of the transport layer in data communication on a network",
-    "What information is used by TCP to reassemble and reorder received segments",
-    "What important information is added to the TCP/IP transport layer header",
-    "Which two characteristics are associated with UDP sessions",
-    "A client application needs to terminate a TCP communication session with a server",
-    "Which flag in the TCP header is used in response to a received FIN",
-    "Which protocol or service uses UDP for a client-to-server",
+    "Which component is designed to protect against unauthorized communications to and from a computer",
+    "Which command will block login attempts on RouterA for a period of 30 seconds if there are 2 failed login attempts within 10 seconds",
+    "What is the purpose of the network security accounting function",
+    "What type of attack may involve the use of tools such as nslookup and fping?",
+    "Match each weakness with an example",
+    "Match the type of information security threat to the scenario",
+    "Which example of malicious code would be classified as a Trojan horse",
+    "What is the difference between a virus and a worm",
+    "Which attack involves a compromise of data that occurs between two end points",
+    "Which type of attack involves an adversary attempting to gather information about a network to identify vulnerabilities",
+    "Match the description to the type of firewall filtering",
+    "What is the purpose of the network security authentication function",
+    "Which firewall feature is used to ensure that packets coming into a network are legitimate responses to requests initiated from internal hosts",
+    "When applied to a router, which command would help mitigate brute-force password attacks against the router",
+    "Identify the steps needed to configure a switch for SSH",
+    "What feature of SSH makes it more secure than Telnet for a device management connection",
+    "What is the advantage of using SSH over Telnet",
+    "What is the role of an IPS",
+    "A user is redesigning a network for a small company and wants to ensure security at a reasonable price. The user deploys a new application-aware firewall with intrusion detection capabilities on the ISP connection",
+    "What is an accurate description of redundancy?",
+    "A network administrator is upgrading a small business network to give high priority to real-time applications traffic. What two types of network services is the network administrator trying to accommodate",
+    "What is the purpose of a small company using a protocol analyzer utility to capture network traffic on the network segments where the company is considering a network upgrade",
+    "Refer to the exhibit. An administrator is testing connectivity to a remote device with the IP address 10.1.1.1. What does the output of this command indicate",
+    "Which method is used to send a ping message specifying the source address for the ping",
+    "A network engineer is analyzing reports from a recently performed network baseline. Which situation would depict a possible latency issue",
+    "Which statement is true about Cisco IOS ping indicators",
+    "A user reports a lack of network connectivity. The technician takes control of the user machine and attempts to ping other computers on the network and these pings fail. The technician pings the default gateway and that also fails. What can be determined for sure by the results of these tests?",
+    "tracert -6 www.cisco.com command on a Windows PC. What is the purpose of the -6 command option",
+    "Why would a network administrator use the tracert utility",
+    "A ping fails when performed from router R1 to directly connected router R2. The network administrator then proceeds to issue the show cdp neighbors command. Why would the network administrator issue this command if the ping failed between the two routers?",
+    "A network engineer is troubleshooting connectivity issues among interconnected Cisco routers and switches. Which command should the engineer use to find the IP address information, host name, and IOS version of neighboring network devices?",
+    "What information about a Cisco router can be verified using the show version command",
+    "Which command should be used on a Cisco router or switch to allow log messages to be displayed on remotely connected sessions using Telnet or SSH",
+    "Which command can an administrator issue on a Cisco router to send debug messages to the vty lines",
+    "By following a structured troubleshooting approach, a network administrator identified a network issue after a conversation with the user. What is the next step that the administrator should take",
+    "Users are complaining that they are unable to browse certain websites on the Internet. An administrator can successfully ping a web server via its IP address, but cannot browse to the domain name of the website. Which troubleshooting tool",
+    "An employee complains that a Windows PC cannot connect to the Internet. A network technician issues the ipconfig command on the PC and is shown an IP address of 169.254.10.3. Which two conclusions can be drawn",
+    "Refer to the exhibit. Host H3 is having trouble communicating with host H1. The network administrator suspects a problem exists with the H3 workstation and wants to prove that there is no problem with the R2 configuration. What tool could the network administrator use on router R2",
+    "Refer to the exhibit. Baseline documentation for a small company had ping round trip time statistics of 36/97/132 between hosts H1 and H3. Today the network administrator checked connectivity by pinging between hosts H1 and H3 that resulted in a round trip time of 1458/2390/6066",
+    "Which network service automatically assigns IP addresses to devices on the network",
+    "Which command can an administrator execute to determine what interface a router will use to reach remote networks",
+    "On which two interfaces or ports can security be improved by configuring executive timeouts",
+    "When configuring SSH on a router to implement secure network management, a network engineer has issued the login local and transport input ssh line vty commands. What three additional configuration actions have to be performed to complete the SSH configuration",
+    "What is considered the most effective way to mitigate a worm attack",
+    "Which statement describes the ping and tracert commands",
+    "A technician is to document the current configurations of all network devices in a college, including those in off-site buildings. Which protocol would be best to use to securely access the network devices",
+    "Which command has to be configured on the router to complete the SSH configuration",
+    "An administrator decides to use WhatAreyouwaiting4 as the password on a newly installed router. Which statement applies to the password choice",
+    "An administrator decides to use pR3s!d7n&0 as the password on a newly installed router. Which statement applies to the password choice", #uguale
+    "An administrator decides to use 5$7*4#033 as the password on a newly installed router. Which statement applies to the password choice",
+    "An administrator decides to use pR3s!d7n&0 as the password on a newly installed router. Which statement applies to the password choice", #uguale
+    "An administrator decides to use 12345678! as the password on a newly installed router. Which statement applies to the password choice",
+    "An administrator decides to use admin as the password on a newly installed router. Which statement applies to the password choice",
+    "An administrator decides to use Feb121978 as the password on a newly installed router. Which statement applies to the password choice",
+    "An administrator decides to use password as the password on a newly installed router. Which statement applies to the password choice",
+    "An administrator decides to use RobErT as the password on a newly installed router. Which statement applies to the password choice",
+    "An administrator decides to use Elizabeth as the password on a newly installed router. Which statement applies to the password choice",
+    "A network technician is troubleshooting an issue and needs to verify the IP addresses of all interfaces on a router. What is the best command to use to accomplish the task",
+    "Students who are connected to the same switch are having slower than normal response times. The administrator suspects a duplex setting issue. What is the best command to use to accomplish the task",
+    "A user wants to know the IP address of the PC. What is the best command to use to accomplish the task",
+    "A student wants to save a router configuration to NVRAM. What is the best command to use to accomplish the task",
+    "A support technician needs to know the IP address of the wireless interface on a MAC. What is the best command to use to accomplish the task",
+    "A network technician is troubleshooting an issue and needs to verify all of the IPv6 interface addresses on a router. What is the best command to use to accomplish the task",
+    "A teacher is having difficulties connecting his PC to the classroom network. He needs to verify that a default gateway is configured correctly. What is the best command to use to accomplish the task",
+    "Only employees connected to IPv6 interfaces are having difficulty connecting to remote networks",
+    "An administrator is troubleshooting connectivity issues and needs to determine the IP address of a website. What is the best command to use to accomplish the task",
+    "Only employees connected to IPv6 interfaces are having difficulty connecting to remote networks",
     "What is a characteristic of UDP",
-    "What kind of port must be requested from IANA in order to be used with",
-    "Which three application layer protocols use TCP",
-    "Which three statements characterize UDP",
-    "Which two fields are included in the TCP header but not in the UDP header",
-    "Which field in the TCP header indicates the status of the three-way handshake process",
-    "Why does HTTP use TCP as the transport layer protocol",
-    "Which two types of applications are best suited for UDP",
-    "How are port numbers used in the TCP/IP encapsulation process",
-    "In what two situations would UDP be better than TCP as the preferred",
-    "What are three responsibilities of the transport layer",
-    "Which three statements describe a DHCP Discover message",
-    "Which two protocols may devices use in the application process that sends email",
-    "What is true about the Server Message Block protocol",
-    "What is the function of the HTTP GET message",
-    "Which OSI layer provides the interface between the applications used to communicate",
-    "Which networking model is being used when an author uploads one",
-    "What do the client/server and peer-to-peer network models have in common",
-    "In what networking model would eDonkey, eMule, BitTorrent, Bitcoin",
-    "What is a common protocol that is used with peer-to-peer applications",
-    "What is a key characteristic of the peer-to-peer networking model",
-    "The application layer of the TCP/IP model performs the functions of what",
-    "What is an example of network communication that uses the client",
-    "Which layer in the TCP/IP model is used for formatting, compressing",
-    "What is an advantage of SMB over FTP",
-    "A manufacturing company subscribes to certain hosted services from its ISP",
-    "Which application layer protocol uses message types such as GET, PUT, and POST",
-    "What type of information is contained in a DNS MX record",
-    "Which three protocols operate at the application layer of the TCP/IP model",
-    "Which protocol is used by a client to communicate securely with a web server",
-    "Which applications or services allow hosts to act as client and server at the same time",
-    "What are two characteristics of peer-to-peer networks",
-    "Which scenario describes a function provided by the transport layer",
-    "Which three layers of the OSI model provide similar network services to",
-    "web server acknowledge after it has received two packets of data from the PC",
-    "will the web server acknowledge after it has received three packets of data from the PC",
-    "server acknowledge after it has received four packets of data from the PC",
-    "The client is requesting TFTP service",
-    "The client is requesting FTP service",
-    "The client is requesting SSH service",
-    "The client is requesting HTTP service",
-    "The client is requesting POP3 service",
-    "The client is requesting telnet service",
-    "The client is requesting SNMP service",
-    "The client is requesting SMTP service",
-    "The client is requesting HTTPS service",
-
     ]
 
 
@@ -93,236 +99,271 @@ def getQuestion(index):
 # ---------------------- Yanderedev momentum ---------------------
 def getAnswer(text):
     if getQuestion(1) in text:
-        return("The client randomly selects a source port number.")
+        return("firewall")
     
     elif getQuestion(2) in text:
-        return("TCP 3-way handshake")
+        return("30 attempts 2 within 10")
 
     elif getQuestion(3) in text:
-        return("0 to 1023")
+        return("to keep track of the actions of a user")
 
     elif getQuestion(4) in text:
-        return("the combination of a source IP address")
+        return("reconnaissance attack")
 
     elif getQuestion(5) in text:
-        return("10 segments")
+        return("configuration weakness - when implementing an access; technological weakness - A network engineer is examinating; security policy weakness -  The network administrator did not") #tabella
 
     elif getQuestion(6) in text:
-        return("the amount of data the destination can process at one time")
+        return("information theft - obtaining trade secret illegally; identity theft - pretending to be someone else; data loss - installing virus code; disruption of service - preventing users from accessing") #tabella
 
     elif getQuestion(7) in text:
-        return("It just sends the datagrams")
+        return("written to look like a video game")
 
     elif getQuestion(8) in text:
-        return("Length, Source Port, Checksum")
+        return("Worms self-replicate but viruses do not")
 
     elif getQuestion(9) in text:
-        return("identifying, tracking")
+        return("man-in-the-middle attack")
 
     elif getQuestion(10) in text:
-        return("sequence numbers")
+        return("reconnaissance")
 
     elif getQuestion(11) in text:
-        return("destination and source port numbers")
+        return("based on the port numbers - application filtering; based on whether the traffic is in response - stateful packet inspection; based on web addresses or keywords - URL filtering; based on the IP or MAC - packet filtering ") #tabella
 
     elif getQuestion(12) in text:
-        return("Destination devices receive traffic with minimal delay, Received")
+        return("to require users to prove who they are")
 
     elif getQuestion(13) in text:
-        return("cl FIN;srv ACK;srv FIN;cl ACK")
+        return("stateful packet inspection")
 
     elif getQuestion(14) in text:
-        return("ACK")
+        return("login block-for 60 attempts 5 within 60")
 
     elif getQuestion(15) in text:
-        return("DNS")
+        return("Non mettere 'login command' e 'password cisco'") #tabella
 
     elif getQuestion(16) in text:
-        return("UDP reassembles the received datagrams")
+        return("login information and data encryption")
 
     elif getQuestion(17) in text:
-        return("registered port")
+        return("SSH provides secure communications to access hosts")
 
     elif getQuestion(18) in text:
-        return("SMTP FTP HTTP")
+        return("detecting and blocking of attacks in real time")
 
     elif getQuestion(19) in text:
-        return("provides basic; relies on application; is a low overhead")
+        return("layered")
 
     elif getQuestion(20) in text:
-        return("window, sequence number")
+        return("multiple paths between switches to ensure there is no single point of failure")
 
     elif getQuestion(21) in text:
-        return("control bits")
+        return("voice-video")
 
     elif getQuestion(22) in text:
-        return("because HTTP requires reliable delivery")
+        return("to document and analyze network traffic requirements on each network segment")
 
     elif getQuestion(23) in text:
-        return("that handle; that can")
+        return("A router along the path did not have a route to the destination")
 
     elif getQuestion(24) in text:
-        return("If multiple conversations")
+        return("without specifying a destination IP address")
 
     elif getQuestion(25) in text:
-        return("when a faster delivery; when applications do not need")
+        return("an increase in host-to-host ping response times")
 
     elif getQuestion(26) in text:
-        return("meeting; multiplexing; identifying")
+        return("'U' may indicate that a router along the path did not contain a route to the destination address and that the ping was unsuccessful")
 
     elif getQuestion(27) in text:
-        return("255.255.255.255; a client seeking an IP address; but only a DHCP server replies")
+        return("Nothing can be determined for sure at this point")
 
     elif getQuestion(28) in text:
-        return("SMTP DNS")
+        return("It forces the trace to use IPv6")
 
     elif getQuestion(29) in text:
-        return("Clients establish a long term connection to servers")
+        return("to identify where a packet was lost or delayed on a network")
 
     elif getQuestion(30) in text:
-        return("to request an HTML page from a web server")
+        return("verify Layer 2 connectivity")
 
     elif getQuestion(31) in text:
-        return("application")
+        return("show cdp neighbors detail")
 
     elif getQuestion(32) in text:
-        return("client/server")
+        return("the value of the configuration register")
 
     elif getQuestion(33) in text:
-        return("Both models support.")
+        return("terminal monitor")
 
     elif getQuestion(34) in text:
-        return("peer-to-peer")
+        return("terminal monitor")
 
     elif getQuestion(35) in text:
-        return("Gnutella")
+        return("Establish a theory of probable causes")
 
     elif getQuestion(36) in text:
-        return("resource sharing")
+        return("nslookup")
 
     elif getQuestion(37) in text:
-        return("session presentation application")
+        return("PC cannot-PC is configured")
 
     elif getQuestion(38) in text:
-        return("www.cisco.com")
+        return("extended ping")
 
     elif getQuestion(39) in text:
-        return("application")
+        return("time delay")
 
     elif getQuestion(40) in text:
-        return("SMB clients can establish a long-term")
+        return("DHCP")
 
     elif getQuestion(41) in text:
-        return("FTP HTTP SMTP")
+        return("ip route")
 
     elif getQuestion(42) in text:
-        return("HTTP")
+        return("console-vty")
 
     elif getQuestion(43) in text:
-        return("the domain name mapped to")
+        return("RSA-IP-Create")
 
     elif getQuestion(44) in text:
-        return("FTP POP3 DHCP")
+        return("Download security updates from the operating system vendor and patch all vulnerable systems")
 
     elif getQuestion(45) in text:
-        return("HTTPS")
+        return("Tracert shows each hop, while ping shows a destination reply only")
 
     elif getQuestion(46) in text:
-        return("P2P applications")
+        return("SSH")
 
     elif getQuestion(47) in text:
-        return("decentralized resources, resource sharing")
+        return("transport input ssh")
 
     elif getQuestion(48) in text:
-        return("A student has two web browser windows open in order to access two web sites")
+        return("It is strong because it uses a passphrase")
 
     elif getQuestion(49) in text:
-        return("session layer; application layer; presentation layer")
+        return("uses a minimum of 10 numbers, letters and special characters") #domanda uguale alla 51
 
     elif getQuestion(50) in text:
-        return("3001")
+        return("it contains 10 numbers and special characters")
 
     elif getQuestion(51) in text:
-        return("4501")
+        return("uses a minimum of 10 numbers, letters and special characters") #domanda uguale alla 49
 
     elif getQuestion(52) in text:
-        return("6001")
+        return("uses a series of numbers or letters")
 
-    elif getQuestion(53) in text: # 60 in itexamanswers.net
-        return("69")
+    elif getQuestion(53) in text: 
+        return("It is weak because it is often the default password on new devices")
 
-    elif getQuestion(54) in text: # 61 in itexamanswers.net
-        return("21")
+    elif getQuestion(54) in text: 
+        return("uses easily found personal information")
 
-    elif getQuestion(55) in text: # 62 in itexamanswers.net
-        return("22")
+    elif getQuestion(55) in text: 
+        return("weak because it is a commonly used password")
 
-    elif getQuestion(56) in text: # 63 in itexamanswers.net
-        return("80")
+    elif getQuestion(56) in text: 
+        return("It is weak since it uses easily found personal information")
 
-    elif getQuestion(57) in text: # 64 in itexamanswers.net
-        return("110")
+    elif getQuestion(57) in text:   
+        return("weak because it uses easily found personal information")
 
-    elif getQuestion(58) in text: # 65 in itexamanswers.net
-        return("23")
+    elif getQuestion(58) in text: 
+        return("show ip interface brief")
 
-                                  # skipped 66
+    elif getQuestion(59) in text:
+        return("show interfaces")
 
-    elif getQuestion(59) in text: # 67 in itexamanswers.net 
-        return("161")
+    elif getQuestion(60) in text:
+        return("ipconfig")
 
-    elif getQuestion(60) in text: # 68 in itexamanswers.net
-        return("25")
+    elif getQuestion(61) in text: 
+        return("copy running-config startup-config")    
 
-    elif getQuestion(61) in text: # 69 in itexamanswers.net
-        return("443")    
+    elif getQuestion(62) in text: 
+        return("ipconfig getifaddr en0")   
+
+    elif getQuestion(63) in text: 
+        return("show ipv6 interface")
+
+    elif getQuestion(64) in text: 
+        return("ipconfig")
+
+    elif getQuestion(65) in text: 
+        return("show running-config")
+
+    elif getQuestion(66) in text: 
+        return("nslookup")
+
+    elif getQuestion(67) in text: 
+        return("show running-config")
+
+    elif getQuestion(68) in text: 
+        return("UDP reassembles the received datagrams in the order they were received")    
 
     else:
         return("No answer or question found")
 
 """
-,,,,,,,,,,,,,...........,,,,,,,,,,,,,,.............,,,,,,.........,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,.........,,,,,,,,,,,,,,,,**,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,.,,,,,,,,,,,,,,,,,,***,,,,,.,,,,,.....,.,,,.,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,......,,,,,,,,,,,,,,,,***,,***,,,***,........,,,,*********,***,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,........,.,,.......,,****,**,,*,,**,.......,***,,,*************,*,,,................,.....,
-.,,,.,,,,.............,...,,,******,,,,,.........,,,,,,***************,*,,*,*,,,...........,..,.....
-.........................,****//*,,*,,,,.............,,,,,,****/*,**,***,,*,,,*,....................
-.......................,*/***/*,******,, ..... . .....,,,,,,,*******/,**,/,,,..,....................
-......................*,***/**/***/(*/.....*..... ...,*.. ..,*.,,*,,*,*,,,,*,..     ................
-.....................,,***/*****/////*,,,/,.***,,..,*,.....,,....,..,,,,,,.,,,.  ..  .....#(/.(.#.#,
-.....................,,*,*,,*,*/(,(**,**/**/*/****/*...,,,*, .       ... ,., ....  , ....*###/,,/,#(
-.....................,,,**,,**/#*(****((*(///**/*/**,,**,*...,    ..... ..,...  .. .................
-....................,,****,,,*(*(***/((/((((///*/********.,,*.....,., ....,. .  ,,....,..../...,(#.#
-..................,*,***********(/**##((((((/(/***////******,*******,..,,,,*.,,..***,,*,...#,(.#*#.*
-..................****,***,/**/(//*(##((((#((/**//////////******,*****,*,*,**.,*,*////**,...........
-..................**/*****//*/(#(((##((((((#///////*///(///*//***////**,*/*//,,/**/*/*/**...(/......
-.................,,*,**//*///(##//#%(((((##///(#((///((////(%##%(///##(/#(//(/*//*/(,,,/,...,.,./.*.
-.................,*..,////((/(#(**/(%%%%%(//#%##(#####(/%#((###((######%%%#((//((////*..,.........*.
-....................,*/*/(((((##((&&&&&#/(#%&&@@@@&&&@@@@@@@&%&@@@@@%%#&&&%#((//((/*/**. ...***,,*,.
-...................,**,/((((/(#%%%&@@@@@@@@@@@@@&&%%%&@@@@@@@@@@@@@%%##&&%%#//(//(//,*,,....#.,(.(/.
-....................,,,/////((#&###%@@@@@@@@@@@@#/**/#&@@@@@@@@@@@%##@&&####/((/(//*,,..............
-.....................,***/*/((#%%%%####%%%##%&%//**,**/#%#((###(((((##%%####((//,/***.......,*,**/*,
-.....................,///,((((##%%#(////////((///*****/////********//(####(((/(/*,((,...............
-.....................,/(///((((((###(///**//(((//*,,**/////********//((##((((/((//((*........*#/#/.,
-......................*(((//((##((((((//////(////*,,**/**(//******///((((((((((//(((,...............
-......................*((/(/#(######(((((///(((%#(((/(((/(**/////////(/((((/((#/(((/,...............
-......................,/(((/##((######((/////%%(**/(///(///*/*////(////((((###((((/,................
-......................,,///(#######((#((/***/***,**/**/***//***////////((((#((//*,,,................
-........................,,///((###%#(#(,,,/((((/((*///////(#(****////////*****,,,,..................
-........................,,,,,**/(#&%#/,,.,(((#((/*/////((((//,,*//((/(//*****,,,,,..................
-.........................,,,,,***/&@%#*,,,///###%%&&%%##(////,,,*(((((&@/***,,,,....................
-..........................,,,,,*(@@@@%/*/*(((//////**//////((////####(@@@@#,,,,.....................
-............................,,,,@@@@@(/*****##(///((((/////(#**,*/*/(%@@@@@/,.......................
-.............................,,#@@@@@((/******//&##########****/#%###@@@@@&*........................
-.............................,,#@@@/*/**,*********&@@@@@*****/(%%%#(#@@@@&&#........................
-..............................,,@@//**/*************/&***,,**(&%%%##%@@@&&&#........................
-..............................%/****************/******/,**/%%%#####%%&&@@&&&.......................
-........................,#&&&**************************//*#&%%##(((#&&@@@@&&&&%,....................
-.................(&&&&@@&@@///*,,**********************//(&&%#((((#@@@@@@&&&&&&&&%,.................
-...........*&&&&&&@&@@@@@@@&(//**********************////%%#(((((&@@@@@@@@&&&&&&&&&&&&&#,...........
-....,%&&&&&&&&&&&&@@@@@@@@@@////********************////(%#(((((@@@@@@@@&&&&&@&&&&&&&&&&&&&&&@* ....
-&&&@&&&&&&@@@&&&@@@@@@@@@@@@@#//************************(%((/(&@@@@@@@@@@@@@@&@@@&&@@@@@&&&&&&&&&&&&
-&&&&@&&&@@@@@&&@@@@@@@@@@@@@@@#/********,***************###&&@@@@@@@@@@@@@@@&&@&@@@@&&&&&&&&&&&&&&&&
-&&@@@@@@@@@@@@@&@@@@@@@@@&@@@@@%(//*******,******(((((((((@@@@@@@@@@@@@@@@@@@@@@@&&&&&&&&&&&&&&&&@@@
+//******/////*******////**********///*//**/////**********//*************//*****/////*************//********/*/********/*******************************
+/****/***////*******///**********///**//*//////**********//************///*****/////*************//**********/********/**********//*******************
+/********////**/***///***********///***/*//////*********//*************//******/////*********,**///*******************/***********/*******************
+/********////**/***///***********///******/////********////***/*/*/(((///*/****/////************///******************//***********/*******************
+/*******/////**/***//***********////*****/////*********////(#########%#(###(#(((#######(((#/****///******************/********************************
+*******/////******//************/////*//*//////*/****/(####(/(#%#############(((#((##(##((###(####%#*****************/************/************/******
+*******/////*****///***********/////*****/////**/#%(/(((%#(#(#######(##%%#%%######%####(##(#((######%###************//********************************
+/***/**////******///***********/////***/*//////###((######(###((#((#/((#(######%%%########(##(####%#(#/(##((##((***//*************/************/******
+********//******//*****//******///////***/*#((/#(((/######(((#((//(((#((/(((####(#(#%#(###(#######%%(######%%%###(///*********************************
+********//*****///**********///////******(*#####(/(/##(((#(((####(#%#(##((*#//((/((#####(#((###############%%####%(#/************/********************
+**************////*************////**(%#(/((####%#((((((#(%##(##%%#####((###((((#(((#(##%###%#/(#####%#%#%((%%(#####///**********/*/*/****************
+***///////***////////**********/*//#(#%#(#(%%####%#(((((((####%%##((##%#######/##(((,#(%#%%(##(#(((###%#((#%#//(####(/#/#**************************,**
+/**///*///****////////////****////#(#(((#####/(##((/(############((#####((((##((####(#(###(###((#(/(###((###(#####((/(/(#/***,**************,,********
+***//***////////////////////////(#%%###((((((((((////(/(((((/#/((((/(((///*//////(((((/((#((///((((((#(##%##%#/(#(((((#((((/*****************,********
+**///***////////////////////////###(/#(/*,*/,,**,**/*******,**,*******//*,,,***////*//(///(/((((((//((##%%####(/((#(##((###(/****//////////*****/////*
+**///***//////////////////////(%#(((((///**,.,*//*,,,,,,,,,,,,,,,,,,,,..........,,,,,,.,,..,**,*/**/////(/(//*/(((((///(/((##(///////////////////////*
+**///***////////////////////**/##(#%#((///,,,******,,*,,,,,,,,,,,...........................,,..,.,,*/********////*,*(//(//(#((///////////////////*//*
+*////**/////////////////*//////(####(//**,,,,,,,,**,,,,,,,,,,,,,............................,,,,,,,,,,**,*******/**/**///(((((((/////////////////////*
+*///***/////////////////*//////#((#((//*,,,..,,***,,,,,,,,,,................................,.,..,,,,,,,,*********/**///*((((#(((/////////////////*//*
+*///***//////////////////////*/(#(#(***,,,,..,,***,,,,,,,,........................................,,,,,,,**,*****,*,*/,*//((((#(((////////////////////
+*///***///////////////*//(////*##///*/*,,,,,,****,,,,,.,.............................................,,,,,,******,,*,*,***///((((((/////////////////*/
+*///***////////////////*/(/////(#(((//*.,,*,,,***,,,,,.,........................ ..................,.,,,,,,******,,,**,**////((#(#((//////////////*///
+*/*****///////////////*/*(///*///(//**/**,.,,***,,,,,,................................................,,,,,,,*****,*,,*,*//((((((#((//////////////*/*/
+*******///////////////***(///////(//**/,,,,,****,,,,,..................................................,,,,,,*****,*.**,**//(((####((/////////////*///
+*******//////////////*/*/(//**///////***,*******,,,,,...................................................,,,,,*******,,,*,*//(((####((////*///////*****
+*******//////////////****///*///(((///**********,,,,,,.............        ..... ....... ..............,,,,,,*****/*******//(#((((((////*///////*//*//
+*******/////////*///***/**//**///((/////********,,*,,,,,.*,.........                       .......,*,,,,,,,,***/**//////**////((##((////**//////*//**/
+*******///////*/*///***/////**/(/(/(////*****,****/*,,**/*(((//(**//,,.....            ....,,*(/////(/(//(//*///*//////////((/((((#(////**//////**/**/
+*******///////***//(**(*////(*/(((//////****,,,*//#//(/((/(/(((/(((#(//**,..............,*/(((((((///(//**//(///***/**///*//(/((#((/////***/////******
+*******//*//////*///*//**/*(*,*//(//(/**//***,,*////*/**/*,*,,,....,,,,,,,,.........,,,,*****,,,.....,,,****//(/***//*/*//(/////((((////**//////******
+*******/**////***//(****////,,,,*///((///****,,*****,,,.,.,//((///***,,.,,*,,......,,,***,,,,**/(///*,,..,,****/*****/////*//,,,((((///****/////******
+*******//*///////*/*/***///*,,,.*,,*((#((****,,,,,,,,.,*/(,.,/((/*  ..,..,,,,,,,.,,,***..... .**((//,./(*,,,,*******/*/(//**..,.,(((///***//////*/****
+*******//*/////*////****///*,,.,,..,/(#//****,,,,,,,*,,**,,.,.,,.  ..,..,,*,,,,,,,,*****,,,,,,. .,,*,,,***,,,,.,,***/(#/(*,*..,,,(((///***/////*******
+*******///////***///***////*,,*,....*((#(****,,,.....,.,......    .....,***,,,,.,,,,******,. ..........,,,,,,,,,,**/((#(,.,,,.*,,(#((///**//////******
+******//**/////*////***///**,,*,....*(##/*****,,,,..................,,,,,,,,,,...,,,,,******,,........,....,,,,,**/*/((/,,.,*,,,(###((//***////*******
+******////////***///***///***,*,..,,/((((/***,,,,,.........,,,,,,,,.,,,,,,,,,,.....,****,,,,,,,,,,,,,,,,..,.,,,**/*/((((,,.**,,/#(#(#((/***////*******
+******///*////**////***///****,,,,,,*(#((/***,,,,,,......,..............,,,,,.......,,,**,,,,....,,,,,,,....,,,,**///((/,.,*,,*(((#((((/***////*******
+******///*////**////**////**/*,,,,,,,,/(//***,,,,,.............. ....,,,,,,,.........,,,***,.............,.,,,,,*//(((/*,,,,,,/((#(#((///**////*******
+******//**////***//****///**/*,,......,////**,,,,,..................,,,,...,,,,....,,,,,,,,,..........,..,,,,,,**//(/*,,,,,,,*(((##(((//***///********
+******///////**/////**////**//*........***//**,,,,,.................,,.....,,,......,,,,,,,,..............,,,,***///,..,,,,,*((((((((///***////*******
+*****/****///***///***////**//*,......,,/**/*,,,,,,.................,.,,,,,,,,.....,,***,,,,...............,,***///*.....,,*/(((((((///****///********
+*****/***////***///**//*//**///**,..,,.,/**/***,,,,,.................,,,,,,,,,,,,,,,,,,*,,,,,............,,,***////,,,...,,(((((((((///****///********
+*****/***///**/*////*////***////*///**,*//*/*,,,,,,,............,,..,.,,.,,.,,**,,,,,,*,,,,,,,.,..........,,***///,..,,,*((((((((((////****/*/*****/*/
+*********////****//**////***/////////((((/*/**,,*,,,.......,.,.,,,,,.,,..............,,,.,,,,,,,.........,,****(/((/*/((((((((((((////*****/*/********
+**********//****////*///****////*//////(((*/**,,,*,,,...,,...,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.,...,,,.,*/***//((((((((((((((((//////******/********
+***********/*****////**/****////**///////(///**,.,*,,........,..,,**,/...  .        . ...*/**,,,,,...,.,,,*,**///(((((((((((((((//////******/*********
+*****/****//*****///**/*****////*////******///*,,,,,.......,.,....,,***,*,,,,,.,,,,,********,,.,........,**,,///(((((((((((((///***///****************
+*****/****/******//*/*/*****///***///******///**,,.*,,...............,,,..............,,,,,,,,,.,,.....,**,**//((((((((///********////****************
+,***************//**///******/*************////**,.,,,.....,.........................,,,,.,,,,,,.,....,**,**///(((((((///**********///****************
+****************//**/*/******/**************/**/*,,..*,...,...,..........................,,,,,,,.,,,,.*/,**////(((((((//**********////****************
+****/***********/*//**/******/**************/**//*,,.,*,,...,,.,,.,,,.....................,,,,,,,,,,,**,**/////((((((///***********/******************
+****/************/***///*****/**************//**//*,,,.*,,,,,,,,,.,,,.....................,,*,,,,,,,**,,*///////((((///*******************************
+****/************************/***************/***/**,,,.,,*,**,,*,,,.,........   .........,,,,**,,****,**/*/////(((///********************************
+*******************/*********/**************,*****/**,,,,,*****,,,,*.,.........    ......,.,,,,****,***/***/,*///////*********************************
+*****************//**/*******/**************.,*******,,,,,,,,**,,,,,,............... ....,,,,****,*,,******/..//////**********************************
+*****************/////*******/*************,  .,**,,**,,,,,,..,,,*,,,,,.................,,,,**,,,,*********. .,////***********************************
+*********************/********************,..   .,,,,,,,,,,.,.,,,,,,*,,,..............,,,,*,,,,,,,***,,*,,  ..,**//***********************************
+***/**************////***************//*,,,..     ..,,,,,,,,,,.,..........,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,    ..,,*///**********************************
+******************/*****************/****,,.         .,.,.,,,.,.......................,,.,,,,,,,,,,,,,      ..,,**///*********************************
+****************/****/******************,,..            ............................,,,,,,,,,,.....         ...,******/*******************************
 """
