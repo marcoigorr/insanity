@@ -6,6 +6,7 @@ Check **Realeases** to install Insanity -> [**Here**](https://github.com/marcoig
 - [**Mod. 11-13**](https://github.com/marcoigorr/insanity/releases/download/v3.0.1-mod_11-13/Insanity.3.0.1_mod_11-13.zip)
 - [**Mod. 14-15**](https://github.com/marcoigorr/insanity/releases/download/v3.0.1/Insanity3.0.1_mod_14-15.zip)
 - [**Mod. 16-17**](https://github.com/marcoigorr/insanity/releases/download/v3.0.2/Insanity3.0.2_mod_16-17.zip)
+- [**Practice Final Exam**](https://github.com/marcoigorr/insanity/releases/download/v3.0.3/Insanity3.0.3_Practice-Final-Exam.zip)
 
 
 If you know you know
