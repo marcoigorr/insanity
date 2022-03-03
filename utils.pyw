@@ -63,7 +63,6 @@ question_list = [
     "Match the description with the media",
     ]
 
-
 def getScrText():
     pytesseract.pytesseract.tesseract_cmd = '.\\Tesseract-OCR\\tesseract.exe'
 
@@ -85,212 +84,172 @@ def getQuestion(index):
 
 # ---------------------- Yanderedev momentum ---------------------
 
-# DA MODIFICARE LE RISPOSTE
 def getAnswer(text):
     if getQuestion(1) in text:
-        return("firewall")
+        return("SSH")
     
     elif getQuestion(2) in text:
-        return("30 attempts 2 within 10")
+        return("the amount of data that can be sent before an acknowledgment is required")
 
     elif getQuestion(3) in text:
-        return("to keep track of the actions of a user")
+        return("well-known")
 
     elif getQuestion(4) in text:
-        return("reconnaissance attack")
+        return("The administrator must first enter privileged EXEC mode before issuing the command.")
 
     elif getQuestion(5) in text:
-        return("configuration weakness - when implementing an access; technological weakness - A network engineer is examinating; security policy weakness -  The network administrator did not") #tabella
+        return("if there is connectivity with the destination device")
 
     elif getQuestion(6) in text:
-        return("information theft - obtaining trade secret illegally; identity theft - pretending to be someone else; data loss - installing virus code; disruption of service - preventing users from accessing") #tabella
+        return("An SVI is created in software and requires a configured IP address and a subnet mask in order to provide remote access to the switch")
 
     elif getQuestion(7) in text:
-        return("written to look like a video game")
+        return("CLI - Users interact; GUI - enables the user to interact; KERNEL - The part of the OS; SHELL - the part of the operating") # Tabella
 
     elif getQuestion(8) in text:
-        return("Worms self-replicate but viruses do not")
+        return("The switch drops the frame.")
 
     elif getQuestion(9) in text:
-        return("man-in-the-middle attack")
+        return("Packets can be relayed with errors when fast-forward switching is used.")
 
     elif getQuestion(10) in text:
-        return("reconnaissance")
+        return("half-duplex operations - a malfunctioning NIC")
 
     elif getQuestion(11) in text:
-        return("based on the port numbers - application filtering; based on whether the traffic is in response - stateful packet inspection; based on web addresses or keywords - URL filtering; based on the IP or MAC - packet filtering ") #tabella
+        return("enables IPv4 - places information in the Ethernet - handles communication between upper layer - adds Ethernet control information") 
 
     elif getQuestion(12) in text:
-        return("to require users to prove who they are")
+        return("nslookup cisco.com - ping cisco.com")
 
     elif getQuestion(13) in text:
-        return("stateful packet inspection")
+        return("DSL line to another ISP")
 
     elif getQuestion(14) in text:
-        return("login block-for 60 attempts 5 within 60")
+        return("show running-config")
 
     elif getQuestion(15) in text:
-        return("Non mettere 'login command' e 'password cisco'") #tabella
+        return("192.168.235.234")
 
     elif getQuestion(16) in text:
-        return("login information and data encryption")
+        return("R1(config)# - service;\n R1> - enable;\n R1# - copy;\n R1(config-line)# - login;\n R1(config-if)# - ip address") # Tabella
 
     elif getQuestion(17) in text:
-        return("SSH provides secure communications to access hosts")
+        return("NVRAM")
 
     elif getQuestion(18) in text:
-        return("detecting and blocking of attacks in real time")
+        return("Retrieves email from ")
 
     elif getQuestion(19) in text:
-        return("layered")
+        return("peer-to-peer")
 
     elif getQuestion(20) in text:
-        return("multiple paths between switches to ensure there is no single point of failure")
+        return("nslookup")
 
     elif getQuestion(21) in text:
-        return("voice-video")
+        return("segment")
 
     elif getQuestion(22) in text:
-        return("to document and analyze network traffic requirements on each network segment")
+        return("network - transport")
 
     elif getQuestion(23) in text:
-        return("A router along the path did not have a route to the destination")
+        return("presentation - application - session")
 
     elif getQuestion(24) in text:
-        return("without specifying a destination IP address")
+        return("connectivity to the internet")
 
     elif getQuestion(25) in text:
-        return("an increase in host-to-host ping response times")
+        return("protocol unreachable - route redirection")
 
     elif getQuestion(26) in text:
-        return("'U' may indicate that a router along the path did not contain a route to the destination address and that the ping was unsuccessful")
+        return("testing the integrity")
 
     elif getQuestion(27) in text:
-        return("Nothing can be determined for sure at this point")
+        return("the use of full-duplex capable Layer 2 switches")
 
     elif getQuestion(28) in text:
-        return("It forces the trace to use IPv6")
+        return("de-encapsulates the frame")
 
     elif getQuestion(29) in text:
-        return("to identify where a packet was lost or delayed on a network")
+        return("LLC - MAC")
 
     elif getQuestion(30) in text:
-        return("verify Layer 2 connectivity")
+        return("extended star")
 
     elif getQuestion(31) in text:
-        return("show cdp neighbors detail")
+        return("255.255.255.192")
 
     elif getQuestion(32) in text:
-        return("the value of the configuration register")
+        return(".64 - sub 1 net num;\n .19 - sub 2 broad addr;\n .32 sub 3 net num;\n .79 - sub 1 broad addr;\n .16 - sub 2 net num;\n .39 - sub 3 broad addr ") # Tabella
 
     elif getQuestion(33) in text:
-        return("terminal monitor")
+        return("public")
 
     elif getQuestion(34) in text:
-        return("terminal monitor")
+        return("broadcast address")
 
     elif getQuestion(35) in text:
-        return("Establish a theory of probable causes")
+        return("Any host or user can get a public IPv6 ")
 
     elif getQuestion(36) in text:
-        return("nslookup")
+        return("remote routes")
 
     elif getQuestion(37) in text:
-        return("PC cannot-PC is configured")
+        return("destination IPv4 address")
 
     elif getQuestion(38) in text:
-        return("extended ping")
+        return("unable to communicate with hosts on remote networks")
 
     elif getQuestion(39) in text:
-        return("time delay")
+        return("fe80::220:b3f:f0e0:29")
 
     elif getQuestion(40) in text:
-        return("DHCP")
+        return("fe80::30d0:115:3f57:fe4c/128")
 
     elif getQuestion(41) in text:
-        return("ip route")
+        return("loopback")
 
     elif getQuestion(42) in text:
-        return("console-vty")
+        return("It ensures sensitive corporate")
 
     elif getQuestion(43) in text:
-        return("RSA-IP-Create")
+        return("wireless LAN controller \n IPS")
 
     elif getQuestion(44) in text:
-        return("Download security updates from the operating system vendor and patch all vulnerable systems")
+        return("software that is installed on a user device")
 
     elif getQuestion(45) in text:
-        return("Tracert shows each hop, while ping shows a destination reply only")
+        return("to all ports except port 4.")
 
     elif getQuestion(46) in text:
-        return("SSH")
+        return("FFFF.FFFF.FFFF")
 
     elif getQuestion(47) in text:
-        return("transport input ssh")
+        return("RT1 will send an ARP reply with its own Fa0/0 MAC address")
 
     elif getQuestion(48) in text:
-        return("It is strong because it uses a passphrase")
+        return("a user who is trying to guess a password to access the router")
 
     elif getQuestion(49) in text:
-        return("uses a minimum of 10 numbers, letters and special characters") #domanda uguale alla 51
+        return("A packet-filtering firewall typically can filter up to the transport layer, whereas a stateful firewall can filter up to the session layer")
 
     elif getQuestion(50) in text:
-        return("it contains 10 numbers and special characters")
+        return("Use antivirus software \n Keep software up to date")
 
     elif getQuestion(51) in text:
-        return("uses a minimum of 10 numbers, letters and special characters") #domanda uguale alla 49
+        return("DoS")
 
     elif getQuestion(52) in text:
-        return("uses a series of numbers or letters")
+        return("Fiber-optic cabling does not conduct electricity \n Fiber-optic cabling is primarily used as backbone cabling")
 
     elif getQuestion(53) in text: 
-        return("It is weak because it is often the default password on new devices")
+        return("throughput")
 
     elif getQuestion(54) in text: 
-        return("uses easily found personal information")
+        return("128 kb/s")
 
     elif getQuestion(55) in text: 
-        return("weak because it is a commonly used password")
-
-    elif getQuestion(56) in text: 
-        return("It is weak since it uses easily found personal information")
-
-    elif getQuestion(57) in text:   
-        return("weak because it uses easily found personal information")
-
-    elif getQuestion(58) in text: 
-        return("show ip interface brief")
-
-    elif getQuestion(59) in text:
-        return("show interfaces")
-
-    elif getQuestion(60) in text:
-        return("ipconfig")
-
-    elif getQuestion(61) in text: 
-        return("copy running-config startup-config")    
-
-    elif getQuestion(62) in text: 
-        return("ipconfig getifaddr en0")   
-
-    elif getQuestion(63) in text: 
-        return("show ipv6 interface")
-
-    elif getQuestion(64) in text: 
-        return("ipconfig")
-
-    elif getQuestion(65) in text: 
-        return("show running-config")
-
-    elif getQuestion(66) in text: 
-        return("nslookup")
-
-    elif getQuestion(67) in text: 
-        return("show running-config")
-
-    elif getQuestion(68) in text: 
-        return("UDP reassembles the received datagrams in the order they were received")    
-
+        return("STP - industrial \n wireless - most mobility options \n optical fiber - high transmission speed \n coaxial - for television") # Tabella
+    
     else:
         return("No answer or question found")
 
