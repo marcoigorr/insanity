@@ -6,62 +6,167 @@ import pytesseract
 # Question array
 question_list = [
     "pisciati",
-    "A client packet is received by a server. The packet has a destination port number of 22",
-    "What does the value of the window size specify",
-    "To which TCP port group does the port 414 belong",
-    "An administrator is trying to configure the switch but receives the error message that is displayed in the exhibit",
-    "What is a user trying to determine when issuing a ping 10.1.1.1",
-    "What is a characteristic of a switch virtual interface",
-    "Match the descriptions to the terms",
-    "What happens when a switch receives a frame and the calculated CRC",
-    "Two network engineers are discussing the methods used to forward frames through a switch",
-    "Which two issues can cause both runts and giants in Ethernet networks",
+    "Which two traffic types use the Real-Time Transport Protocol",
+    "Which wireless technology has low-power and data rate requirements making it popular",
+    "model provides a route to forward messages through an internetwork",
+    "Which type of server relies on record types such as A",
+    "What are proprietary protocols",
+    "What service is provided by DNS",
+    "The packet has a destination port number of 110",
+    "What command can be used on a Windows PC to see the IP configuration",
+    "That printer has been shared so that other computers on the home network can also use the printer",
+    "What characteristic describes a virus",
+    "The first employee uses a web browser to view a company web page in order to read some announcements",
+    "Match the description to the IPv6 addressing component", # tabella
+    "If Host1 were to transfer a file to the server",
+    "Match the characteristic to the forwarding method", # tabella
+    "The IP address of which device interface should be used as the default gateway setting",
+    "What service is provided by Internet Messenger",
+    "Match the network with the correct IP address and prefix", # tabella
+    "Which protocol was responsible for building the table that is shown",
+    "A network administrator notices that some newly installed Ethernet cabling is carrying corrupt and distorted data signals",
+    "A host is trying to send a packet to a device on a remote LAN segment, but there are currently no mappings in its ARP cache",
+    "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication",
+    "The packet has a destination port number of 53",
+    "The new LAN must support 25 connected devices",
+    "What characteristic describes a Trojan horse",
+    "What service is provided by HTTPS",
+    "A technician with a PC is using multiple applications while connected to the Internet",
+    "The new LAN must support 61 connected devices",
+    "Match the network with the correct IP address and prefix that ", # duplicata
+    "What characteristic describes a DoS attack",
+    "Match the application protocols to the correct transport protocols", # tabella
+    "What service is provided by SMTP",
+    "Which scenario describes a function provided by the transport layer",
+    "Host B on subnet Teachers transmits a packet to host D",
+    "What does the term",
+    "An administrator is trying to configure the switch but receives",
+    "Which two protocols operate at the top layer of the",
+    "A company has a file server that shares a folder named Public",
+    "What three requirements are defined by the protocols used",
+    "What are two characteristics of IP",
+    "An employee of a large corporation remotely logs into the company",
+    "What are two common causes of signal degradation when using",
+    "Which subnet would include the address",
+    "On the basis of the output",
+    "Which two statements describe how to assess traffic flow patterns",
+    "What is the consequence of configuring a router",
+    "Which three layers of the OSI model map to the application layer of the",
+    "If PC1 is sending a packet to PC2",
+    "What will happen if the default gateway address",
+    "What are two features of ARP",
+    "The new LAN must support 90 connected devices",
+    "messages that are not present in",
+    "The packet has a destination port number of 80",
+    "What is an advantage for small organizations of adopting IMAP",
+    "Which software utility can the technician use to diagnose the problem",
     "Which two functions are performed at the LLC sublayer",
-    "Which two commands could be used to check if DNS name resolution",
-    "A small advertising company has a web server that provides critical business service",
-    "Only employees connected to IPv6 interfaces are having difficulty connecting to remote networks",
-    "A network administrator is connecting a new host to the Registrar LAN",
-    "Match the command with the device mode at which the command is entered",
-    "A router boots and enters setup mode",
+    "The global configuration command",
+    "What happens when the",
+    "Match the type of threat with the cause",
+    "A disgruntled employee is using some free wireless networking",
+    "What service is provided by HTTP",
+    "The packet has a destination port number of 67",
+    "What are two problems that can be caused by a large number of ARP",
+    "When testing the connectivity",
+    "During the process of forwarding traffic",
+    "What characteristic describes antispyware",
+    "A network administrator needs to keep the user ID",
+    "What are the two most effective ways to defend against malware",
+    "Which type of security threat would be responsible if",
+    "Which frame field is created by a source node and used",
+    "The new LAN must support 4 connected devices",
     "What service is provided by POP3",
-    "Two students are working on a network design project",
-    "Which command is used to manually query a DNS server to resolve a specific host name",
-    "Which PDU is processed when a host computer is de-encapsulating a message at the transport layer",
-    "Which two OSI model layers have the same functionality as two layers of the",
-    "Which three layers of the OSI model are comparable in function to the application layer of the",
-    "What task might a user be trying to accomplish by using the ping",
-    "Which two ICMP messages are used by both IPv4",
-    "A network technician types the command ping 127.0.0.1",
-    "why is it no longer necessary",
-    "What does a router do when it receives a Layer 2 frame over the network medium",
-    "Which two acronyms represent the data link sublayers that Ethernet",
-    "A network team is comparing topologies for connecting on a shared media",
-    "Given network 172.18.109.0",
-    "Three devices are on three different subnets. Match the network address and the broadcast address",
-    "What type of address is 198.133.219.162",
-    "What does the IP address 192.168.1.15",
-    "Why is NAT not needed in IPv6",
-    "What routing table entry has a next hop address associated with a destination",
-    "Which term describes a field in the IPv4 packet header that contains a unicast",
-    "If the default gateway is configured incorrectly on the host",
-    "Which is the compressed format of the IPv6 address",
-    "Which IPv6 address is one of the link-local addresses of the workstation",
-    "What type of IPv6 address is represented by",
-    "Which statement describes network security",
-    "Which two devices would be described as intermediary devices",
+    "What two security solutions are most likely",
+    "What characteristic describes antivirus software",
+    "What mechanism is used by a router to prevent a received",
+    "The packet has a destination port number of 69",
+    "An administrator defined a local user account with a secret password",
+    "Which two functions are performed at the MAC sublayer of the OSI Data Link Layer to facilitate Ethernet communication", # duplicato
+    "An IPv6 enabled device sends a data packet with the destination address",
+    "What are the three parts of an IPv6 global",
+    "A network administrator is designing the layout of a new wireless network",
+    "A new network administrator has been asked to enter a banner message on a Cisco",
+    "What method is used to manage contention-based",
+    "What is a function of the data link layer",
+    "What is the purpose of the TCP sliding window",
     "What characteristic describes spyware",
-    "The exhibit shows a small switched network and the contents of the MAC address",
-    "Which destination address is used in an ARP request frame",
-    "PC1 issues an ARP request because it needs to send a packet to PC3",
-    "A network administrator is issuing the login block-for 180 attempts 2 within 30 command on a router",
-    "Which statement describes the characteristics of packet-filtering and stateful firewalls as they relate",
-    "What are two ways to protect a computer from malware",
-    "The employees and residents of Ciscoville cannot access the Internet or any remote",
-    "Which two statements describe the characteristics of",
-    "What OSI physical layer term describes the measure of the transfer of bits across a medium",
-    "What is the maximum possible throughput between the PC and the server",
-    "Match the description with the media",
+    "Which switching method drops frames that fail the FCS",
+    "Which range of link-local addresses can be assigned to an",
+    "What service is provided by FTP",
+    "A user is attempting to access",
+    "Which two statements accurately describe an advantage or a disadvantage",
+    "What would be the interface ID",
+    "PC1 issues an ARP request because",
+    "What service is provided by BOOTP",
+    "What characteristic describes adware",
+    "When a switch configuration includes a user-defined error threshold on a per-port basis",
+    "Match a statement to the related network model", # tabella
+    "What are two primary responsibilities of the Ethernet MAC",
+    "What three facts can be determined from the viewable",
+    "Match each type of frame field to its function", # tabella
+    "What is the subnet ID associated with the",
+    "Match the firewall function to the type of threat protection it provides to the network", # tabella
+    "Users are reporting longer delays in authentication",
+    "How does the service password-encryption",
+    "Which two statements are correct in a comparison",
+    "A network administrator wants to have the same network mask",
+    "What characteristic describes identity theft",
+    "The new LAN must support 200 connected devices",
+    "What are three commonly followed standards for constructing and installing",
+    "What is wrong with the displayed termination",
+    "Match the characteristic to the category", # tabella
+    "The packet has a destination port number of 143",
+    "What are two characteristics shared by TCP",
+    "Your answers should waste the fewest addresses",
+    "The packet has a destination port number of 21",
+    "What attribute of a NIC would place it at the data link",
+    "The new LAN must support 10 connected devices",
+    "What technique is used with UTP",
+    "The network administrator has assigned the LAN",
+    "The switches are in their default configuration",
+    "Match a statement to the related network model", # duplicato
+    "A network engineer has been given the network address",
+    "Which connector is used with twisted-pair",
+    "The packet has a destination port number of 22",
+    "What characteristic describes an IPS",
+    "What service is provided by DHCP",
+    "Match the header field with the appropriate layer of the OSI model", # tabella
+    "The switches have a default configuration",
+    "rate requirements making it popular in IoT environments",
+    "message types must be permitted through",
+    "A client is using SLAAC",
+    "Two pings were issued from a host on a local network",
+    "An organization is assigned an",
+    "What subnet mask is needed if an",
+    "If host A sends an IP packet to host B",
+    "What is a benefit of using cloud computing in networking",
+    "Which two statements are correct about MAC",
+    "What is one main characteristic of the data link layer",
+    "What are three characteristics of the",
+    "Which information does the show",
+    "Which two commands can be used on a Windows",
+    "What are two functions that are provided by the network layer",
+    "Which two statements describe features of an",
+    "What characteristic describes a VPN",
+    "Why would a Layer 2",
+    "Match each description to its corresponding term", # tabella
+    "A user sends an HTTP request",
+    "What is an advantage to using a protocol that",
+    "Data is being sent from a source PC",
+    "Match each description with the corresponding TCP", # tabella
+    "A company uses the address block",
+    "What single subnet mask would be appropriate to use for the three subnetworks",
+    "Match each item to the type of topology diagram",
+    "What two pieces of information are displayed",
+    "A user is complaining that an external web page is taking",
+    "Which value",
+    "A network technician is researching the use of fiber",
+    "description with an appropriate IP address", # tabella
+    "A user is executing a tracert to a remote device",
+    "Users report that the network access is slow",
     ]
+
 
 def getScrText():
     pytesseract.pytesseract.tesseract_cmd = '.\\Tesseract-OCR\\tesseract.exe'
@@ -86,170 +191,324 @@ def getQuestion(index):
 
 def getAnswer(text):
     if getQuestion(1) in text:
-        return("SSH")
-    
+        return("video - voice")    
     elif getQuestion(2) in text:
-        return("the amount of data that can be sent before an acknowledgment is required")
-
+        return("ZigBee")
     elif getQuestion(3) in text:
-        return("well-known")
-
+        return("internet")
     elif getQuestion(4) in text:
-        return("The administrator must first enter privileged EXEC mode before issuing the command.")
-
+        return("DNS")
     elif getQuestion(5) in text:
-        return("if there is connectivity with the destination device")
-
+        return("protocols developed by organizations")
     elif getQuestion(6) in text:
-        return("An SVI is created in software and requires a configured IP address and a subnet mask in order to provide remote access to the switch")
-
+        return("Resolves domain names")
     elif getQuestion(7) in text:
-        return("CLI - Users interact; GUI - enables the user to interact; KERNEL - The part of the OS; SHELL - the part of the operating") # Tabella
-
+        return("POP3")
     elif getQuestion(8) in text:
-        return("The switch drops the frame.")
-
+        return("ipconfig")
     elif getQuestion(9) in text:
-        return("Packets can be relayed with errors when fast-forward switching is used.")
-
+        return("peer-to-peer (P2P)")
     elif getQuestion(10) in text:
-        return("half-duplex operations - a malfunctioning NIC")
-
+        return("malicious software")
     elif getQuestion(11) in text:
-        return("enables IPv4 - places information in the Ethernet - handles communication between upper layer - adds Ethernet control information") 
-
+        return("audio conference, financial transactions, web page")
     elif getQuestion(12) in text:
-        return("nslookup cisco.com - ping cisco.com")
-
+        return("identify subnets -> sub ID; \nby the provider -> global; \nIPv4 -> interface ID")
     elif getQuestion(13) in text:
-        return("DSL line to another ISP")
-
+        return("application, transport, Internet, and network access layers")
     elif getQuestion(14) in text:
-        return("show running-config")
-
+        return("always, checks CRC, checks frame -> store-and-frwd; \nhas, may, begins -> cut-through")
     elif getQuestion(15) in text:
-        return("192.168.235.234")
-
+        return("R1: G0/0")
     elif getQuestion(16) in text:
-        return("R1(config)# - service;\n R1> - enable;\n R1# - copy;\n R1(config-line)# - login;\n R1(config-if)# - ip address") # Tabella
-
+        return("An application that allows")
     elif getQuestion(17) in text:
-        return("NVRAM")
-
+        return("A -> /25; \nB -> /26; \nC -> /27; \nD -> /30")
     elif getQuestion(18) in text:
-        return("Retrieves email from ")
-
+        return("ARP")
     elif getQuestion(19) in text:
-        return("peer-to-peer")
-
+        return("RFI - EMI")
     elif getQuestion(20) in text:
-        return("nslookup")
-
+        return("of the default gateway")
     elif getQuestion(21) in text:
-        return("segment")
-
+        return("integrates Layer 2 flows between 10 - implements CSMA/CD")
     elif getQuestion(22) in text:
-        return("network - transport")
-
+        return("DNS")
     elif getQuestion(23) in text:
-        return("presentation - application - session")
-
+        return("255.255.255.224")
     elif getQuestion(24) in text:
-        return("connectivity to the internet")
-
+        return("malicious software")
     elif getQuestion(25) in text:
-        return("protocol unreachable - route redirection")
-
+        return("to secure the exchange of text")
     elif getQuestion(26) in text:
-        return("testing the integrity")
-
+        return("based on the source port number that is used by each application")
     elif getQuestion(27) in text:
-        return("the use of full-duplex capable Layer 2 switches")
-
-    elif getQuestion(28) in text:
-        return("de-encapsulates the frame")
-
-    elif getQuestion(29) in text:
-        return("LLC - MAC")
-
-    elif getQuestion(30) in text:
-        return("extended star")
-
-    elif getQuestion(31) in text:
         return("255.255.255.192")
-
+    elif getQuestion(28) in text:
+        return("A -> /25; \nB -> /26; \nC -> /27; \nD -> /30")
+    elif getQuestion(29) in text:
+        return("an attack that slows")
+    elif getQuestion(30) in text:
+        return("FTP, HTTP, SMTP -> TCP \nDHCP, TFTP -> UDP")
+    elif getQuestion(31) in text:
+        return("Allows clients to send email")
     elif getQuestion(32) in text:
-        return(".64 - sub 1 net num;\n .19 - sub 2 broad addr;\n .32 sub 3 net num;\n .79 - sub 1 broad addr;\n .16 - sub 2 net num;\n .39 - sub 3 broad addr ") # Tabella
-
+        return("A student has two web browser")
     elif getQuestion(33) in text:
-        return("public")
-
+        return("00-00-0c-94-36-ab \n00-00-0c-94-36-bb \n172.16.20.200 \n172.16.10.200")
     elif getQuestion(34) in text:
-        return("broadcast address")
-
+        return("loss of signal strength as distance")
     elif getQuestion(35) in text:
-        return("Any host or user can get a public IPv6 ")
-
+        return("enter privileged EXEC")
     elif getQuestion(36) in text:
-        return("remote routes")
-
+        return("POP - DNS")
     elif getQuestion(37) in text:
-        return("destination IPv4 address")
-
+        return("authorization")
     elif getQuestion(38) in text:
-        return("unable to communicate with hosts on remote networks")
-
+        return("message size \nmessage encoding \ndelivery options")
     elif getQuestion(39) in text:
-        return("fe80::220:b3f:f0e0:29")
-
+        return("does not require - operates independently")
     elif getQuestion(40) in text:
-        return("fe80::30d0:115:3f57:fe4c/128")
-
+        return("security - quality of service - fault tolerance")
     elif getQuestion(41) in text:
-        return("loopback")
-
+        return("improper termination - low-quality cable or connectors")
     elif getQuestion(42) in text:
-        return("It ensures sensitive corporate")
-
+        return("192.168.1.64/26")
     elif getQuestion(43) in text:
-        return("wireless LAN controller \n IPS")
-
+        return("There are 4 hops - There is connectivity")
     elif getQuestion(44) in text:
-        return("software that is installed on a user device")
-
+        return("Capture traffic during peak - Perform the capture")
     elif getQuestion(45) in text:
-        return("to all ports except port 4.")
-
+        return("The IPv6 enabled router")
     elif getQuestion(46) in text:
-        return("FFFF.FFFF.FFFF")
-
+        return("application - session - presentation")
     elif getQuestion(47) in text:
-        return("RT1 will send an ARP reply with its own Fa0/0 MAC address")
-
+        return("remove the Ethernet header")
     elif getQuestion(48) in text:
-        return("a user who is trying to guess a password to access the router")
-
+        return("with hosts in other networks")
     elif getQuestion(49) in text:
-        return("A packet-filtering firewall typically can filter up to the transport layer, whereas a stateful firewall can filter up to the session layer")
-
+        return("If a host is ready to send - If a device receiving an ARP")
     elif getQuestion(50) in text:
-        return("Use antivirus software \n Keep software up to date")
-
+        return("255.255.255.128")
     elif getQuestion(51) in text:
-        return("DoS")
-
+        return("Neighbor Solicitation - Router Advertisement")
     elif getQuestion(52) in text:
-        return("Fiber-optic cabling does not conduct electricity \n Fiber-optic cabling is primarily used as backbone cabling")
+        return("HTTP")
+    elif getQuestion(53) in text:
+        return("Messages are kept in the mail servers until")
+    elif getQuestion(54) in text:
+        return("nslookup")
+    elif getQuestion(55) in text:
+        return("enables IPv4 and IPv6 \nplaces information in the Ethernet \nhandles communication between \nadds Ethernet control information")
+    elif getQuestion(56) in text:
+        return("The switch can be remotely managed")
+    elif getQuestion(57) in text:
+        return("Communication between")
+    elif getQuestion(58) in text:
+        return("maintence -> poor handling \nenviromental -> temperature extremes \nhardware -> physical damage \nelectrical -> voltage spikes")
+    elif getQuestion(59) in text:
+        return("reconnaissance")
+    elif getQuestion(60) in text:
+        return("A basic set of rules for exchanging text, graphic images, sound, video, and other multimedia files on the web")
+    elif getQuestion(61) in text:
+        return("DHCP")
+    elif getQuestion(62) in text:
+        return("The ARP request is sent - All ARP request messages must")
+    elif getQuestion(63) in text:
+        return("ping - ipconfig - nslookup")
+    elif getQuestion(64) in text:
+        return("switch the packet to the directly")
+    elif getQuestion(65) in text:
+        return("applications that protect end devices")
+    elif getQuestion(66) in text:
+        return("SSH")
+    elif getQuestion(67) in text:
+        return("Update the operating system - Install and update")
+    elif getQuestion(68) in text:
+        return("Trojan horse")
+    elif getQuestion(69) in text:
+        return("frame check sequence field")
+    elif getQuestion(70) in text:
+        return("255.255.255.248")
+    elif getQuestion(71) in text:
+        return("Retrieves email from the server by downloading")
+    elif getQuestion(72) in text:
+        return("virtual private networks - intrusion prevention systems")
+    elif getQuestion(73) in text:
+        return("applications that protect end devices")
+    elif getQuestion(74) in text:
+        return("It decrements the value of the TTL ")
+    elif getQuestion(75) in text:
+        return("TFTP")
+    elif getQuestion(76) in text:
+        return("Configure the IP domain name on the router \nGenerate the SSH keys \nEnable inbound vty SSH sessions")
+    elif getQuestion(77) in text:
+        return("places information in the Ethernet frame \nintegrates Layer 2 flows between \nimplements trailer with frame \nimplements CSMA/CD \napplies source and destination MAC")
+    elif getQuestion(78) in text:
+        return("configured routers on the local link")
+    elif getQuestion(79) in text:
+        return("subnet ID - global - interface ID")
+    elif getQuestion(80) in text:
+        return("interference - security - coverage area")
+    elif getQuestion(81) in text:
+        return("Exit privileged EXEC")
+    elif getQuestion(82) in text:
+        return("CSMA/CA")
+    elif getQuestion(83) in text:
+        return("provides for the exchange of frames")
+    elif getQuestion(84) in text:
+        return("to request that a source")
+    elif getQuestion(85) in text:
+        return("software that is installed on a user")
+    elif getQuestion(86) in text:
+        return("store-and-forward switching")
+    elif getQuestion(87) in text:
+        return("FE80::/10")
+    elif getQuestion(88) in text:
+        return("Allows for data transfers")
+    elif getQuestion(89) in text:
+        return("DNS server - default gateway")
+    elif getQuestion(90) in text:
+        return("introduces problems - provides a solution")
+    elif getQuestion(91) in text:
+        return("1E6F:65FF:FEC2:BDF8")
+    elif getQuestion(92) in text:
+        return("ARP reply with its MAC address - ARP reply with the PC2 MAC address")
+    elif getQuestion(93) in text:
+        return("Legacy application that enables")
+    elif getQuestion(94) in text:
+        return("software that is installed on a user")
+    elif getQuestion(95) in text:
+        return("store-and-forward")
+    elif getQuestion(96) in text:
+        return("no dedicated, client and server -> peer-to-peer network \nrequires a specific, a background service -> peer-to-peer aplication")
+    elif getQuestion(97) in text:
+        return("accessing the media - data encapsulation")
+    elif getQuestion(98) in text:
+        return("The switch can be remotely managed \nOne device is attached to a physical interface \nThe default SVI has been configured")
+    elif getQuestion(99) in text:
+        return("error detection -> checks \naddressing -> helps \ntype -> is used \nframe start -> identifies the beginning")
+    elif getQuestion(100) in text:
+        return("2001:DA48:FC5:A4::/64")
+    elif getQuestion(101) in text:
+        return("by port number -> application filtering \nbased on ip -> packet filtering \nunsolicited incoming -> stateful packet insp \naccess to websites -> URL filtering")
+    elif getQuestion(102) in text:
+        return("the network performance baseline")
+    elif getQuestion(103) in text:
+        return("It encrypts passwords that are stored in router or switch configuration files")
+    elif getQuestion(104) in text:
+        return("The Source Address field name from - The Time-to-Live field from IPv4")
+    elif getQuestion(105) in text:
+        return("255.255.255.224")
+    elif getQuestion(106) in text:
+        return("the use of stolen credentials ")
+    elif getQuestion(107) in text:
+        return("255.255.255.0")
+    elif getQuestion(108) in text:
+        return("cable lengths - pinouts - connector types")
+    elif getQuestion(109) in text:
+        return("The untwisted length of each wire is too long")
+    elif getQuestion(110) in text:
+        return("Layer 3, into a network, 32 or 128 -> IP address \nLayer 2, OUI, 48 -> MAC address")
+    elif getQuestion(111) in text:
+        return("IMAP")
+    elif getQuestion(112) in text:
+        return("port numbering - use of checksum")
+    elif getQuestion(113) in text:
+        return("208/28 - 224/28")
+    elif getQuestion(114) in text:
+        return("FTP")
+    elif getQuestion(115) in text:
+        return("MAC address")
+    elif getQuestion(116) in text:
+        return("255.255.255.240")
+    elif getQuestion(117) in text:
+        return("twisting the wires together into pairs")
+    elif getQuestion(118) in text:
+        return("192.168.10.38 - 255.255.255.248 - 192.168.10.33")
+    elif getQuestion(119) in text:
+        return("only hosts B, C, and router R1")
+    elif getQuestion(120) in text:
+        return("no dedicated, client and server -> peer-to-peer network \nrequires a specific, a background service -> peer-to-peer aplication")
+    elif getQuestion(121) in text:
+        return("200")
+    elif getQuestion(122) in text:
+        return("RJ 45 (true answer)")
+    elif getQuestion(123) in text:
+        return("SSH")
+    elif getQuestion(124) in text:
+        return("a network device that filters")
+    elif getQuestion(125) in text:
+        return("Dynamically assigns IP")
+    elif getQuestion(126) in text:
+        return("802.2, FCS, MAC addr -> Layer 2 \nTTL, IP addr -> Layer 3 \nAcknowledge, Destination -> layer 4")
+    elif getQuestion(127) in text:
+        return("only hosts B, C, and router R1")
+    elif getQuestion(128) in text:
+        return("Zigbee")
+    elif getQuestion(129) in text:
+        return("neighbor solicitations - neighbor advertisement")
+    elif getQuestion(130) in text:
+        return("It must send an ICMPv6 Neighbor")
+    elif getQuestion(131) in text:
+        return("Security rules are applied")
+    elif getQuestion(132) in text:
+        return("256")
+    elif getQuestion(133) in text:
+        return("255.255.255.192")
+    elif getQuestion(134) in text:
+        return("BB:BB:BB:BB:BB:BB")
+    elif getQuestion(135) in text:
+        return("Network capabilities are extended")
+    elif getQuestion(136) in text:
+        return("Destination IP addresses in a packet - Destination and source MAC addresses")
+    elif getQuestion(137) in text:
+        return("It shields the upper layer protocol")
+    elif getQuestion(138) in text:
+        return("A device listens and waits until - After detecting a collision - All of the devices on a segment")
+    elif getQuestion(139) in text:
+        return("the contents of the saved configuration")
+    elif getQuestion(140) in text:
+        return("route print - netstat -r")
+    elif getQuestion(141) in text:
+        return("directing data packets to destination - providing end devices")
+    elif getQuestion(142) in text:
+        return("Directly connected interfaces - If a default static route is configured")
+    elif getQuestion(143) in text:
+        return("a tunneling protocol that provides")
+    elif getQuestion(144) in text:
+        return("to enable the switch to be managed remotely")
+    elif getQuestion(145) in text:
+        return("message encoding -> of converting \nsizing -> of breaking \nencapsulation -> of placing")
+    elif getQuestion(146) in text:
+        return("the MAC address of the default gateway")
+    elif getQuestion(147) in text:
+        return("It encourages")
+    elif getQuestion(148) in text:
+        return("The source port field - UDP segments are - The UDP destination")
+    elif getQuestion(149) in text:
+        return("number -> window size \nused -> sequence num \nmethod -> retransmission \nreceived -> acknowledgement")
+    elif getQuestion(150) in text:
+        return("255.255.255.128")
+    elif getQuestion(151) in text:
+        return("255.255.255.240")
+    elif getQuestion(152) in text:
+        return("IP addr -> logical topology \n location, path -> physical topology")
+    elif getQuestion(153) in text:
+        return("IP addresses - Layer 1 statuses")
+    elif getQuestion(154) in text:
+        return("tracert")
+    elif getQuestion(155) in text:
+        return("Time-to-Live")
+    elif getQuestion(156) in text:
+        return("Fiber optic cabling requires different termination - Fiber optic provides higher data ")
+    elif getQuestion(157) in text:
+        return("link-local -> 169.254 \npublic addr -> 198.133 \nexperimental addr -> 240.2 \nloopback - > 127.0.01")
+    elif getQuestion(158) in text:
+        return("when the value in the TTL field reaches zero")
+    elif getQuestion(159) in text:
+        return("worm")
 
-    elif getQuestion(53) in text: 
-        return("throughput")
-
-    elif getQuestion(54) in text: 
-        return("128 kb/s")
-
-    elif getQuestion(55) in text: 
-        return("STP - industrial \n wireless - most mobility options \n optical fiber - high transmission speed \n coaxial - for television") # Tabella
-    
     else:
         return("No answer or question found")
 
